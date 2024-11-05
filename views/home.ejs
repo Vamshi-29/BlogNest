@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+   <title>HomePage</title>
+   <style>
+      /* Set a fixed height and width for the card */
+      .card {
+          width: 18rem;
+          height: 25rem; /* Adjust height as needed */
+          margin-bottom: 1rem;
+      }
+      .card-img-top {
+          height: 12rem; /* Adjust this for your preferred image height */
+          object-fit: cover; /* Ensures image fills the designated area */
+      }
+      .card-body {
+          overflow: hidden; /* Ensures text doesn't overflow the card */
+      }
+   </style>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-3 row row-cols-3">
+      <% blogs.forEach(blog => { %> 
+        <div class="col">
+          <div class="card">
+            <img src="<%= blog.coverimageurl %>" class="card-img-top" alt="Image for <%= blog.title %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <p class="card-text"><%= blog.body %></p>
+              <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <%- include('./partials/script') %>
+</body>
+</html>

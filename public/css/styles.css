@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3); /* Soft pastel gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+/* Navbar styling to stay fixed at the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Dark navbar for contrast */
+    color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar brand and links */
+.navbar-brand,
+.nav-link {
+    color: #f9f9f9 !important;
+    font-weight: bold;
+}
+
+.navbar-link:hover {
+    color: #ff7b89 !important; /* Coral hover effect */
+}
+
+/* Container styling for grid layout */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-bottom: 2px solid #ffb3c6; /* Accent color */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #ff7b89; /* Coral for titles */
+}
+
+/* Card Text */
+.card-text {
+    color: #595959;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Button Styling */
+.btn-primary {
+    align-self: flex-start;
+    background-color: #ff7b89; /* Coral button */
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #ff5f71; /* Darker coral on hover */
+}
